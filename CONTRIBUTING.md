@@ -3,6 +3,12 @@
 Thank you for contributing to Dali. This document covers how to get involved
 and what kinds of contributions are most valuable to the project.
 
+Dali is not a general-purpose legal AI framework.
+It is evidentiary infrastructure focused on whether AI-generated legal
+citations remain attributable, reconstructable, and defensible under scrutiny.
+Contributions should strengthen reproducibility, provenance, verification, or
+benchmark integrity.
+
 ---
 
 ## 15-minute quick start
@@ -69,7 +75,9 @@ Tier 1 runs entirely offline. No API keys. No external services.
 
 ## Contribution tracks
 
-Dali is benchmark and evidence infrastructure, not a typical library.
+Dali is evidentiary infrastructure, not a traditional application framework or
+SDK. The project prioritizes reproducibility, provenance, deterministic
+evaluation, and public benchmark integrity over feature velocity.
 Contributions are valued across seven tracks:
 
 | Track | What's needed | Where to start |
@@ -197,7 +205,7 @@ Schema and ontology changes go through a lightweight proposal, open an issue wit
 - [ ] New synthetic prompts pass `check_prompt`
 - [ ] Schema changes have an accompanying `spec-change` issue
 - [ ] No PII in corpus records: run `corpus/anonymizer.py` if needed
-- [ ] Commit author matches your real identity
+- [ ] Commit authorship must accurately represent the contributor responsible for the change
 
 ---
 
@@ -220,7 +228,8 @@ The following are not acceptable as scoring-eligible Tier 1 sources:
 - "People said a model hallucinated" accounts without a retrievable authority
 - Incidents that cannot be independently re-verified by a third party
 
-This constraint is not a limitation. It is what makes the corpus defensible. A benchmark built on unverifiable sources cannot itself serve as evidentiary infrastructure.
+This constraint is intentional. A benchmark built on unverifiable incidents
+cannot itself function as evidentiary infrastructure.
 
 ---
 
@@ -240,7 +249,8 @@ We are particularly interested in structured collaborations with:
 
 ## Code of conduct
 
-Be direct, be specific, be accurate. This project handles legal information ,
-precision matters more than enthusiasm.
+Be precise. Be reproducible. Be evidence-oriented.
+Dali handles legal citation integrity infrastructure. Accuracy, traceability,
+and methodological rigor matter more than velocity or opinion.
 
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
