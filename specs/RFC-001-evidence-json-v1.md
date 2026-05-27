@@ -1,8 +1,10 @@
 # RFC-001: Evidence JSON v1.0
 
-**Status:** ACCEPTED
+**Status:** DRAFT — public review open
 **Created:** 2026-05-26
 **Author:** Yen Kha
+
+> This is the first public draft of the Evidence JSON contract. Breaking changes are still possible before the v1.0 freeze. Comments and conformance feedback are welcome via GitHub issues with label `spec-change`.
 
 ---
 
@@ -61,7 +63,7 @@ Reserved for later RFCs:
 
 ```json
 {
-  "$schema": "https://dali.yenk.dev/schemas/evidence-bundle-v1.json",
+  "$schema": "https://raw.githubusercontent.com/yenk/Dali-Foundation/main/schemas/evidence-bundle.schema.json",
   "schema_version": "1.0.0",
   "bundle_id": "<uuid>",
   "created_at": "<ISO 8601 timestamp>",
@@ -224,8 +226,14 @@ Unknown fields must be ignored by conformant consumers.
 
 ## 7. Reference implementation
 
-The reference evaluator in `scoring/` produces conformant `EvidenceBundle`
-output. It is correct but not optimized. It serves as the baseline against
-which production implementations are benchmarked.
+The reference evaluator in `runners/run_integrity.py` emits per-citation
+`CitationIntegrityResult` records (see [schemas/integrity-result.schema.json](../schemas/integrity-result.schema.json)).
+Wrapping these into a full `EvidenceBundle` with `replay_state` and `summary`
+fields is part of the v1.0 freeze work — currently tracked under the v1
+roadmap item in [docs/roadmap.md](../docs/roadmap.md). Until then, conformant
+producers should construct the bundle envelope from the documented schema
+in §3.1.
 
-Machine-readable schemas: [`schemas/evidence-bundle.schema.json`](../schemas/evidence-bundle.schema.json)
+Machine-readable schemas:
+- [`schemas/evidence-bundle.schema.json`](../schemas/evidence-bundle.schema.json) — bundle envelope
+- [`schemas/integrity-result.schema.json`](../schemas/integrity-result.schema.json) — per-citation record
