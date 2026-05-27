@@ -193,5 +193,7 @@ See [CITATION.cff](CITATION.cff), or:
 MIT. See [LICENSE](LICENSE).
 
 Dali is an open evidentiary infrastructure project for legal AI systems.
-Operated by [GammaLex AI Inc.](https://gammalex.com) · Primary author: Yen Kha.
-Contributions are licensed under MIT.
+
+Maintained by GammaLex AI Inc.
+Primary author: Yen Kha.
+
