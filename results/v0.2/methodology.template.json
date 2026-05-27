@@ -6,14 +6,14 @@
   "corpus_version": "v0.2",
   "prompt_count": 150,
   "corpus_files": [
-    "synthetic/legal/case_citations.jsonl",
-    "synthetic/legal/statutory_interpretation.jsonl",
-    "synthetic/legal/contract_law.jsonl",
-    "synthetic/legal/uk_commonwealth.jsonl",
-    "synthetic/legal/brazil.jsonl",
-    "synthetic/research/policy_citations.jsonl",
-    "synthetic/research/academic_claims.jsonl",
-    "synthetic/adversarial/hallucination_prone.jsonl"
+    "benchmarks/tier2/legal/case_citations.jsonl",
+    "benchmarks/tier2/legal/statutory_interpretation.jsonl",
+    "benchmarks/tier2/legal/contract_law.jsonl",
+    "benchmarks/tier2/legal/uk_commonwealth.jsonl",
+    "benchmarks/tier2/legal/brazil.jsonl",
+    "benchmarks/tier2/research/policy_citations.jsonl",
+    "benchmarks/tier2/research/academic_claims.jsonl",
+    "benchmarks/tier2/adversarial/hallucination_prone.jsonl"
   ],
   "models": {
     "claude-3-5-sonnet-20241022": {

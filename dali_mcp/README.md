@@ -117,7 +117,7 @@ All tools have direct CLI equivalents for terminal users:
 
 ```bash
 # Validate corpus
-python -m corpus.validator data/public/citation_failure_cases.json
+python -m corpus.validator benchmarks/tier1/corpus/citation_failure_cases.json
 
 # Validate synthetic prompts (via CI schema check)
 pytest tests/ -q

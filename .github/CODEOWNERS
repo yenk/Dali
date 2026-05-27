@@ -8,8 +8,8 @@
 specs/          @yenk
 schemas/        @yenk
 
-# Corpus data — maintainer review required for all additions
-data/           @yenk
+# Benchmark assets — maintainer review required for all additions
+benchmarks/     @yenk
 corpus/         @yenk
 
 # CI workflows — maintainer review required

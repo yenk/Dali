@@ -13,12 +13,12 @@ Usage
 -----
     # Default — deterministic local evaluation, no network:
     python runners/run_integrity.py \\
-        --corpus data/public/citation_failure_cases.json \\
+        --corpus benchmarks/tier1/corpus/citation_failure_cases.json \\
         --output results/v0.2/<date>/integrity.json
 
     # Also check whether source URLs are still reachable (HTTP HEAD only):
     python runners/run_integrity.py \\
-        --corpus data/public/citation_failure_cases.json \\
+        --corpus benchmarks/tier1/corpus/citation_failure_cases.json \\
         --output results/v0.2/<date>/integrity.json \\
         --check-reachability
 
@@ -332,8 +332,8 @@ def parse_args(argv=None) -> argparse.Namespace:
     )
     p.add_argument(
         "--corpus",
-        default="data/public/citation_failure_cases.json",
-        help="Path to citation_failure_cases.json (default: data/public/...)",
+        default="benchmarks/tier1/corpus/citation_failure_cases.json",
+        help="Path to citation_failure_cases.json (default: benchmarks/tier1/corpus/...)",
     )
     p.add_argument(
         "--output",

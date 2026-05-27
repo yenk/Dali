@@ -14,7 +14,7 @@ python -m venv .venv
 # Fish:       source .venv/bin/activate.fish
 pip install -r requirements.txt
 python runners/run_integrity.py \
-  --corpus data/public/citation_failure_cases.json \
+  --corpus benchmarks/tier1/corpus/citation_failure_cases.json \
   --output results/demo/integrity.json
 ```
 
@@ -29,14 +29,14 @@ If you want to see which sources are currently reachable, add `--check-reachabil
 
 ```bash
 python runners/run_integrity.py \
-  --corpus data/public/citation_failure_cases.json \
+  --corpus benchmarks/tier1/corpus/citation_failure_cases.json \
   --output results/demo/integrity.json \
   --check-reachability
 ```
 
 ## 3. Run the shipped Tier 2 synthetic probes
 
-Tier 2 uses the built-in 150-prompt synthetic corpus under `synthetic/`.
+Tier 2 uses the built-in 150-prompt synthetic corpus under `benchmarks/tier2/`.
 
 ```bash
 python runners/run_synthetic.py \
@@ -45,7 +45,7 @@ python runners/run_synthetic.py \
 ```
 
 What this does:
-- runs every prompt under `synthetic/` against the selected models
+- runs every prompt under `benchmarks/tier2/` against the selected models
 - writes one result file per model plus a `methodology.json`
 - prints a live per-prompt summary and a citation-metrics table at the end
 
@@ -58,7 +58,7 @@ What this does:
    │      │                  │                       │                  └─ % of citation URLs that resolve to a real source
    │      │                  │                       └─ response classification (see table below)
    │      │                  └─ how many citations the extractor found in the model's response
-   │      └─ prompt ID from synthetic/ corpus
+   │      └─ prompt ID from benchmarks/tier2/ corpus
    └─ progress counter
 ```
 
@@ -110,7 +110,7 @@ Use this for local experimentation or extended evaluation. If you want your prom
 
 ## 5. Add a new synthetic prompt
 
-Create a JSONL entry under `synthetic/` that matches the repo schema:
+Create a JSONL entry under `benchmarks/tier2/` that matches the repo schema:
 
 ```json
 {

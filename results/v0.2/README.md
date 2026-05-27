@@ -229,18 +229,18 @@ Full methodology: [METHODOLOGY.md](../../METHODOLOGY.md). Per-result schema: `re
 
 ## Appendix: Corpus composition
 
-See `synthetic/` and [METHODOLOGY.md](../../METHODOLOGY.md) for full corpus composition.
+See `benchmarks/tier2/` and [METHODOLOGY.md](../../METHODOLOGY.md) for full corpus composition.
 
 | File | Category | Count |
 |---|---|---|
-| `synthetic/legal/case_citations.jsonl` | US case law | 25 |
-| `synthetic/legal/statutory_interpretation.jsonl` | US statutes | 15 |
-| `synthetic/legal/contract_law.jsonl` | Contract law | 15 |
-| `synthetic/legal/uk_commonwealth.jsonl` | UK / Commonwealth | 20 |
-| `synthetic/legal/brazil.jsonl` | Brazil | 20 |
-| `synthetic/research/policy_citations.jsonl` | Policy / regulatory | 15 |
-| `synthetic/research/academic_claims.jsonl` | Academic / empirical | 15 |
-| `synthetic/adversarial/hallucination_prone.jsonl` | Adversarial | 25 |
+| `benchmarks/tier2/legal/case_citations.jsonl` | US case law | 25 |
+| `benchmarks/tier2/legal/statutory_interpretation.jsonl` | US statutes | 15 |
+| `benchmarks/tier2/legal/contract_law.jsonl` | Contract law | 15 |
+| `benchmarks/tier2/legal/uk_commonwealth.jsonl` | UK / Commonwealth | 20 |
+| `benchmarks/tier2/legal/brazil.jsonl` | Brazil | 20 |
+| `benchmarks/tier2/research/policy_citations.jsonl` | Policy / regulatory | 15 |
+| `benchmarks/tier2/research/academic_claims.jsonl` | Academic / empirical | 15 |
+| `benchmarks/tier2/adversarial/hallucination_prone.jsonl` | Adversarial | 25 |
 | **Total** | | **150** |
 
 ---

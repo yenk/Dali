@@ -23,7 +23,7 @@ Generate a deterministic Tier 1 integrity evaluation locally (no API keys requir
 
 ```bash
 python runners/run_integrity.py \
-  --corpus data/public/citation_failure_cases.json \
+  --corpus benchmarks/tier1/corpus/citation_failure_cases.json \
   --output results/demo/integrity.json
 ```
 

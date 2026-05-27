@@ -18,7 +18,7 @@
 ## Checklist
 
 - [ ] `pytest tests/` passes
-- [ ] New corpus records pass `python -m corpus.validator data/public/citation_failure_cases.json`
+- [ ] New corpus records pass `python -m corpus.validator benchmarks/tier1/corpus/citation_failure_cases.json`
 - [ ] New synthetic prompts pass `validate_prompt_jsonl` (CLI or MCP)
 - [ ] Schema / ontology changes have a linked `spec-change` issue: #
 - [ ] No PII in corpus records — `corpus/anonymizer.py` run if needed

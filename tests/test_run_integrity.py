@@ -137,7 +137,7 @@ class TestEvaluateLocal:
 
 class TestRunMain:
     def test_runs_against_seed_corpus(self, tmp_path):
-        corpus_path = Path("data/public/citation_failure_cases.json")
+        corpus_path = Path("benchmarks/tier1/corpus/citation_failure_cases.json")
         if not corpus_path.is_file():
             pytest.skip("seed corpus not found")
 
@@ -156,7 +156,7 @@ class TestRunMain:
         assert data["evaluator"] == "local-reference"
 
     def test_result_shape(self, tmp_path):
-        corpus_path = Path("data/public/citation_failure_cases.json")
+        corpus_path = Path("benchmarks/tier1/corpus/citation_failure_cases.json")
         if not corpus_path.is_file():
             pytest.skip("seed corpus not found")
 

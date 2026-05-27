@@ -2,7 +2,7 @@
 """Backfill prompt_text into existing Tier 2 result files.
 
 For result files produced before runners/run_synthetic.py started
-embedding prompt_text per record. Reads the source synthetic/*.jsonl
+embedding prompt_text per record. Reads the source benchmarks/tier2/*.jsonl
 prompts, builds a prompt_id → prompt_text map, then injects prompt_text
 into each result record in-place.
 
@@ -24,11 +24,11 @@ import sys
 
 
 def load_prompt_map() -> dict[str, str]:
-    """Build {prompt_id: prompt_text} from every synthetic/*.jsonl file."""
+    """Build {prompt_id: prompt_text} from every benchmarks/tier2/*.jsonl file."""
     repo_root = pathlib.Path(__file__).resolve().parent.parent
-    synthetic_dir = repo_root / "synthetic"
+    synthetic_dir = repo_root / "benchmarks" / "tier2"
     if not synthetic_dir.is_dir():
-        raise SystemExit(f"synthetic/ not found at {synthetic_dir}")
+        raise SystemExit(f"benchmarks/tier2/ not found at {synthetic_dir}")
 
     prompts: dict[str, str] = {}
     for jsonl in synthetic_dir.rglob("*.jsonl"):
@@ -110,7 +110,7 @@ def main(argv: list[str]) -> int:
         print("No files to process.")
         return 1
 
-    print(f"Loading prompts from synthetic/ ...")
+    print(f"Loading prompts from benchmarks/tier2/ ...")
     prompts = load_prompt_map()
     print(f"  loaded {len(prompts)} prompts")
     print()

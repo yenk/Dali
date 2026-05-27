@@ -30,14 +30,14 @@ VALID_DIFFICULTIES = {
 
 # Subcategory → file mapping for contributor guidance
 SUBCATEGORY_FILES = {
-    "case_citations": "synthetic/legal/case_citations.jsonl",
-    "statutory_interpretation": "synthetic/legal/statutory_interpretation.jsonl",
-    "contract_law": "synthetic/legal/contract_law.jsonl",
-    "uk_commonwealth": "synthetic/legal/uk_commonwealth.jsonl",
-    "brazil": "synthetic/legal/brazil.jsonl",
-    "academic_claims": "synthetic/research/academic_claims.jsonl",
-    "policy_citations": "synthetic/research/policy_citations.jsonl",
-    "hallucination_prone": "synthetic/adversarial/hallucination_prone.jsonl",
+    "case_citations": "benchmarks/tier2/legal/case_citations.jsonl",
+    "statutory_interpretation": "benchmarks/tier2/legal/statutory_interpretation.jsonl",
+    "contract_law": "benchmarks/tier2/legal/contract_law.jsonl",
+    "uk_commonwealth": "benchmarks/tier2/legal/uk_commonwealth.jsonl",
+    "brazil": "benchmarks/tier2/legal/brazil.jsonl",
+    "academic_claims": "benchmarks/tier2/research/academic_claims.jsonl",
+    "policy_citations": "benchmarks/tier2/research/policy_citations.jsonl",
+    "hallucination_prone": "benchmarks/tier2/adversarial/hallucination_prone.jsonl",
 }
 
 REQUIRED_PROMPT_FIELDS = ("id", "category", "subcategory", "prompt", "difficulty")
@@ -173,7 +173,7 @@ def _new_prompt_impl(
         "notes": notes or "<REPLACE: describe what failure mode this prompt is testing>",
     }
 
-    destination = SUBCATEGORY_FILES.get(subcategory, f"synthetic/{category}/")
+    destination = SUBCATEGORY_FILES.get(subcategory, f"benchmarks/tier2/{category}/")
     header = (
         f"# Template generated for {category}/{subcategory} ({difficulty})\n"
         f"# Add this entry (without the # comment lines) to: {destination}\n"
@@ -240,7 +240,7 @@ def _bundle_prompts_impl(prompts_json: str) -> dict:
     pr_checklist = [
         "[ ] pytest tests/ passes",
         "[ ] All prompts pass check_prompt (no issues above)",
-        "[ ] Prompts added to the correct synthetic/ file",
+        "[ ] Prompts added to the correct benchmarks/tier2/ file",
         "[ ] No PII or unpublished matter in prompt text",
         "[ ] Commit author identity is set (name + email)",
         "[ ] PR description explains what failure mode the prompts test",

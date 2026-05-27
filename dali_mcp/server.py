@@ -47,7 +47,7 @@ def check_case(record_json: str) -> str:
     """Validate a canonical citation-failure case for the Tier 1 corpus.
 
     Accepts a JSON object representing one record from
-    data/public/citation_failure_cases.json. Returns a validation report
+    benchmarks/tier1/corpus/citation_failure_cases.json. Returns a validation report
     showing whether the record is scoring-eligible, which required fields
     are missing, and any taxonomy or lineage violations.
 
@@ -81,7 +81,7 @@ def check_prompt(prompt_json: str) -> str:
             valid (bool)
             issues (list[str])
             summary (str)
-            destination_file (str) - which synthetic/ file to add this to
+            destination_file (str) - which benchmarks/tier2/ file to add this to
     """
     return json.dumps(_check_prompt_impl(prompt_json), indent=2)
 

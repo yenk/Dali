@@ -69,7 +69,7 @@ htmlcov/
 
 # ── Internal / private data ───────────────────────────────────────────────────
 # Un-anonymized corpus, attorney name lists, curation provenance
-data/internal/
+benchmarks/tier1/corpus/internal/
 
 # Internal verification notes, testing run artifacts
 docs/benchmark/

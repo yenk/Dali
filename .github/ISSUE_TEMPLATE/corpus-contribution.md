@@ -51,5 +51,5 @@ assignees: ''
 
 - [ ] Source URL is publicly accessible
 - [ ] Attorney names removed (run `corpus/anonymizer.py` if needed)
-- [ ] Record passes `python -m corpus.validator data/public/citation_failure_cases.json`
+- [ ] Record passes `python -m corpus.validator benchmarks/tier1/corpus/citation_failure_cases.json`
 - [ ] `annotation_confidence` set appropriately (high / medium / low)

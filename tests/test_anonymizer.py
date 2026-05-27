@@ -26,7 +26,7 @@ ATTORNEY_NAMES = [
     "Danya Perry",
 ]
 
-ATTORNEY_BLOCKLIST = Path("data/internal/attorney_names_blocklist.txt")
+ATTORNEY_BLOCKLIST = Path("benchmarks/tier1/corpus/internal/attorney_names_blocklist.txt")
 
 
 def _make_case_with_names() -> CitationFailureCase:
@@ -166,7 +166,7 @@ class TestEndToEndAnonymization:
         if not ATTORNEY_BLOCKLIST.is_file():
             pytest.skip("blocklist not found")
         blocklist = ATTORNEY_BLOCKLIST.read_text().strip().splitlines()
-        corpus_path = Path("data/internal/citation_failure_cases.json")
+        corpus_path = Path("benchmarks/tier1/corpus/internal/citation_failure_cases.json")
         if not corpus_path.is_file():
             pytest.skip("corpus not found")
 
