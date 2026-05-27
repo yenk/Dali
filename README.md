@@ -66,7 +66,7 @@ GPT-4.1 was the most engaged model and the most fabrication-prone: of its 374 ci
 
 ### Why we test across jurisdictions
 
-US-only legal benchmarks underweight risk in places where AI legal tooling is being deployed but training-data coverage is thinner. Aggregated across all 524 citations:
+US-only legal benchmarks underweight risk in places where AI legal tooling is being deployed but training-data coverage is thinner. Aggregated across all 524 generated citations, grouped by jurisdictional evaluation track:
 
 | Jurisdiction track | Verified (HTTP 200) | Confirmed fabricated (HTTP 404) |
 |---|---:|---:|
@@ -76,7 +76,7 @@ US-only legal benchmarks underweight risk in places where AI legal tooling is be
 | Adversarial citation traps | 29% | 47% |
 | Brazil (Portuguese, civil law) | **3%** | 9% |
 
-UK common-law citation structure transfers cleanly from training data. Brazilian Portuguese civil-law does not — and the gap is large enough that a US-only benchmark would have missed it entirely. A cross-jurisdictional benchmark is how you find these gaps before the AI is in front of a court.
+UK common-law citation structure transfers cleanly from training data. Brazilian Portuguese civil-law showed the weakest transferability across all evaluated tracks, with only 3% resolving successfully under deterministic verification. US-only legal benchmarks underweight risk where legal citation structure, language distribution, and public-authority coverage differ materially from dominant English-language training corpora. A cross-jurisdictional benchmark is how you find these gaps before the AI is in front of a court.
 
 → Bar charts, per-model leaderboard, full per-jurisdiction breakdown, methodology, and reproducible run instructions: **[results/v0.2/](results/v0.2/)**
 
