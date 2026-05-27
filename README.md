@@ -105,7 +105,7 @@ source .venv/bin/activate.fish
 ```bash
 pip install -r requirements.txt
 python runners/run_integrity.py \
-  --corpus data/public/citation_failure_cases.json \
+  --corpus benchmarks/tier1/corpus/citation_failure_cases.json \
   --output results/demo/integrity.json
 ```
 
@@ -114,7 +114,7 @@ This runs the deterministic Tier 1 evaluator locally. No API keys or hosted serv
 Expected output:
 
 ```text
-INFO run_integrity: loading corpus: data/public/citation_failure_cases.json
+INFO run_integrity: loading corpus: benchmarks/tier1/corpus/citation_failure_cases.json
 INFO run_integrity: corpus: 4 total, 3 scoring-eligible, 0 pre-canonical, 1 needs-verification
 INFO run_integrity: evaluating 3 record(s)
 INFO run_integrity:   evaluating: mata-v-avianca-2023

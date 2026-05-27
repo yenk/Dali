@@ -28,13 +28,13 @@ pip install -r requirements.txt
 
 # Run the Tier 1 deterministic evaluator (no API keys needed)
 python runners/run_integrity.py \
-  --corpus data/public/citation_failure_cases.json \
+  --corpus benchmarks/tier1/corpus/citation_failure_cases.json \
   --output results/demo/integrity.json
 ```
 
 Expected output:
 ```text
-INFO run_integrity: loading corpus: data/public/citation_failure_cases.json
+INFO run_integrity: loading corpus: benchmarks/tier1/corpus/citation_failure_cases.json
 INFO run_integrity: corpus: 4 total, 3 scoring-eligible, 0 pre-canonical, 1 needs-verification
 INFO run_integrity: evaluating 3 record(s)
 INFO run_integrity:   evaluating: mata-v-avianca-2023
@@ -74,8 +74,8 @@ Contributions are valued across seven tracks:
 
 | Track | What's needed | Where to start |
 |---|---|---|
-| **Corpus expansion** | Annotated real-world AI citation failure cases: especially UK/Commonwealth, Brazil, adversarial | `data/public/citation_failure_cases.json` |
-| **Synthetic prompts** | New Tier 2 probe prompts across legal domains | `synthetic/` + `dali_mcp/` contributor tools |
+| **Corpus expansion** | Annotated real-world AI citation failure cases: especially UK/Commonwealth, Brazil, adversarial | `benchmarks/tier1/corpus/citation_failure_cases.json` |
+| **Synthetic prompts** | New Tier 2 probe prompts across legal domains | `benchmarks/tier2/` + `dali_mcp/` contributor tools |
 | **Ontology review** | Legal practitioners reviewing treatment and proposition ontology definitions | [schemas/ontology.md](schemas/ontology.md) + open a discussion issue |
 | **Parser coverage** | eyecite wrapper improvements, jurisdiction adapters | Roadmap: see [docs/roadmap.md](docs/roadmap.md). `corpus/parsers/` will land with eyecite integration. |
 | **Spec authorship** | Drafting and reviewing changes to schemas and the Evidence JSON contract | `specs/` |
@@ -94,7 +94,7 @@ correctness, and specification rigor.
 Court-documented AI citation failure incidents. These live in:
 
 ```
-data/public/citation_failure_cases.json
+benchmarks/tier1/corpus/citation_failure_cases.json
 ```
 
 Each scoring-eligible record requires these fields:
@@ -116,7 +116,7 @@ Each scoring-eligible record requires these fields:
 Validate your record before submitting:
 
 ```bash
-python -m corpus.validator data/public/citation_failure_cases.json
+python -m corpus.validator benchmarks/tier1/corpus/citation_failure_cases.json
 ```
 
 Optional: the `dali_mcp/` contributor interface exposes the same validation as an MCP tool (`check_case`) for editor-integrated workflows.
@@ -132,7 +132,7 @@ if your record contains names from the original filing.
 Model-facing prompts for live Tier 2 evaluation. These live in:
 
 ```
-synthetic/
+benchmarks/tier2/
   legal/
     case_citations.jsonl
     statutory_interpretation.jsonl
@@ -169,7 +169,7 @@ External run results are welcome.
 
 ```bash
 python runners/run_integrity.py \
-  --corpus data/public/citation_failure_cases.json \
+  --corpus benchmarks/tier1/corpus/citation_failure_cases.json \
   --output results/v0.2/{your-run-date}/integrity.json
 ```
 
@@ -178,7 +178,7 @@ python runners/run_integrity.py \
 ```bash
 python runners/run_synthetic.py \
   --models <model-id> \
-  --prompts synthetic/ \
+  --prompts benchmarks/tier2/ \
   --output results/v0.2/{your-run-date}/
 ```
 

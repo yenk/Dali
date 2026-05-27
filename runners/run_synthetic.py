@@ -11,7 +11,7 @@ Usage:
     # Full run — pinned model, versioned output directory:
     python runners/run_synthetic.py \
         --models openai_fast \
-        --prompts synthetic/ \
+        --prompts benchmarks/tier2/ \
         --output results/v0.2/$(date +%Y-%m-%d)/
 
     # Multi-model comparison run:
@@ -800,8 +800,8 @@ async def main() -> None:
     parser.add_argument(
         "--prompts",
         type=Path,
-        default=Path("synthetic"),
-        help="Path to synthetic prompt directory (default: synthetic/)",
+        default=Path("benchmarks/tier2"),
+        help="Path to synthetic prompt directory (default: benchmarks/tier2/)",
     )
     parser.add_argument(
         "--output",

@@ -61,7 +61,7 @@ Versions follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 - **Tier 2 synthetic probe corpus**: 150 prompts across 8 categories and
-  5 jurisdictions (`synthetic/`).
+  5 jurisdictions (`benchmarks/tier2/`).
 - **First public benchmark run**: 450 evaluations across GPT-4o-mini,
   GPT-4.1, and GPT-4o, producing 524 citations with deterministic
   existence verification and HTTP-status-level fabrication distinction.

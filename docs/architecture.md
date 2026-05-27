@@ -11,7 +11,7 @@ This page describes the public benchmark layers, artifact flow, and the boundary
 
 ## Public benchmark flow
 
-1. The Tier 1 evaluator loads `data/public/citation_failure_cases.json`.
+1. The Tier 1 evaluator loads `benchmarks/tier1/corpus/citation_failure_cases.json`.
 2. The runner applies the workflow-centric defensibility rubric deterministically.
 3. The output is written as a JSON result artifact.
 4. Optional reachability checks can be enabled for source validation.

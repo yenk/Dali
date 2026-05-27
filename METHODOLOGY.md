@@ -82,7 +82,7 @@ Lineage resolution walks the `parent_incident_id` chain to produce a `mutation_l
 
 Tier 2 is the public/supporting synthetic track for the benchmark standard.
 
-Tier 1 records are canonical cases, such as Mata v. Avianca, stored as structured corpus records. Tier 2 records are prompt probes stored under `synthetic/` and used to test model or retrieval behavior against controlled citation tasks.
+Tier 1 records are canonical cases, such as Mata v. Avianca, stored as structured corpus records. Tier 2 records are prompt probes stored under `benchmarks/tier2/` and used to test model or retrieval behavior against controlled citation tasks.
 
 ## Overview
 
