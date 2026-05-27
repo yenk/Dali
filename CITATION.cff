@@ -33,6 +33,7 @@ preferred-citation:
     - family-names: Kha
       given-names: Yen
       email: yen.kha@gammalex.com
+  institution: "GammaLex AI Inc."
   year: 2026
   version: "0.2.0"
   url: "https://github.com/yenk/Dali-Foundation"
