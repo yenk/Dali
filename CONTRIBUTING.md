@@ -270,15 +270,25 @@ cannot itself function as evidentiary infrastructure.
 
 ## Academic partnerships
 
-If you are affiliated with a law school, legal research institute, or court
-data project and want to contribute corpus data or co-author evaluation
-methodology, please open an issue with the label `partnership`.
+Dali welcomes collaboration with law schools, legal research institutes,
+court transparency organizations, and public legal data projects interested in:
 
-We are particularly interested in structured collaborations with:
-- Harvard Law School Library / Caselaw Access Project
-- Stanford CodeX
-- Free Law Project / CourtListener
-- Legal data projects focused on UK/Commonwealth or Brazilian jurisdictions
+- Citation integrity evaluation
+- Reproducible legal AI benchmarking
+- Corpus development and annotation
+- Legal citation ontology review
+- Methodology replication and peer review
+
+If your institution is interested in contributing datasets, evaluation methods,
+or benchmark review, please open an issue with the label `partnership`.
+
+Areas of particular interest include:
+
+- U.S. federal and state court citation datasets
+- UK/Commonwealth legal citation systems
+- Brazilian legal and regulatory citation structures
+- Public court transparency and access initiatives
+- Empirical legal studies involving AI-generated citations
 
 ---
 
@@ -289,3 +299,5 @@ Dali handles legal citation integrity infrastructure. Accuracy, traceability,
 and methodological rigor matter more than velocity or opinion.
 
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+Dali is operated by GammaLex AI Inc. Contributions are licensed under MIT unless explicitly stated otherwise.
