@@ -11,6 +11,41 @@ benchmark integrity.
 
 ---
 
+## Philosophy
+
+Dali is built on a simple assumption:
+A legal citation is not trustworthy merely because it appears plausible or
+resolves to a real case.
+
+A citation becomes defensible only when the workflow that produced it can be
+reconstructed, verified, and independently evaluated under a versioned
+methodology.
+
+Dali therefore prioritizes:
+- Reproducibility over convenience
+- Provenance over opacity
+- Deterministic evidence over probabilistic confidence
+- Public methodology over unverifiable claims
+- Verifiable sourcing over benchmark scale
+
+The project intentionally favors methodological rigor and evidentiary
+traceability over feature velocity.
+A benchmark that cannot itself be audited cannot function as citation
+integrity infrastructure.
+
+### Non-goals
+
+Dali is not:
+- a legal research engine
+- a generative legal assistant
+- a litigation platform
+- a generalized LLM benchmark suite
+- a replacement for judicial review
+
+Its scope is evidentiary evaluation and citation integrity infrastructure.
+
+---
+
 ## 15-minute quick start
 
 ```bash
