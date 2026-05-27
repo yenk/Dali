@@ -251,8 +251,8 @@ The `results/v0.2/2026-05-26/` directory contains artifacts from two sequential 
 
 | File | Model | git SHA | Run timestamp (UTC) |
 |---|---|---|---|
-| `openai_fast.json` + `methodology.openai_fast.json` | GPT-4o-mini | `68dd9442` | 2026-05-26T22:01 |
-| `openai_quality.json` + `openai_production.json` + `methodology.json` | GPT-4.1, GPT-4o | `8169a5bb` | 2026-05-26T22:38 |
+| `openai_fast.json` + `methodology.openai_fast.json` | GPT-4o-mini | `v0.2.0` | 2026-05-26T22:01 |
+| `openai_quality.json` + `openai_production.json` + `methodology.json` | GPT-4.1, GPT-4o | `v0.2.0` | 2026-05-26T22:38 |
 
 Both runs used identical `policy_version=v1.0.0` and `parser_version=v1.1.0`. The commits between the two SHAs were documentation-only and did not change scoring semantics. All three models' results are aggregated in this document under the same policy.
 

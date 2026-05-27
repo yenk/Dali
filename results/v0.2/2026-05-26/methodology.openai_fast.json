@@ -3,7 +3,7 @@
   "parser_version": "v1.1.0",
   "policy_version": "v1.0.0",
   "run_at": "2026-05-26T22:01:09.477255+00:00",
-  "git_sha": "68dd9442b38c71785ce8ac2d4ba96553ec6b68d0",
+  "git_sha": "v0.2.0",
   "models": [
     {
       "alias": "openai_fast",
